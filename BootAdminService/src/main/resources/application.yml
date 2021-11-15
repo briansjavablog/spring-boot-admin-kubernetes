@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+        service-labels:
+          type: boot-microservice
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+logging:
+  file:
+    name: /opt/app/logs/boot-admin.log
